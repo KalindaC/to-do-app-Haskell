@@ -1,6 +1,7 @@
 module Main where
 
 import Options.Applicative
+import GHC.Float
 
 type ItemIndex = Int
 
@@ -17,6 +18,9 @@ dataPathParser = strOption $
     <> short 'p'
     <> metavar "DATAPATH"
     <> help  ("path to data file (default: "++ defaultDataPath ++ ")")
+
+
+
 
 main :: IO ()
 main = do
